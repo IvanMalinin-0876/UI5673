@@ -6,7 +6,15 @@ import "@ui5/webcomponents-fiori/dist/ShellBar";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents/dist/ComboBox";
 import "@ui5/webcomponents/dist/Card";
-
+import "@ui5/webcomponents/dist/Switch"
+import "@ui5/webcomponents/dist/Panel";
+import "@ui5/webcomponents/dist/TabContainer";
+import "@ui5/webcomponents/dist/Tab"; 
+import "@ui5/webcomponents/dist/TabSeparator";
+import "@ui5/webcomponents/dist/Table.js";
+import "@ui5/webcomponents/dist/TableColumn.js"; 
+import "@ui5/webcomponents/dist/TableRow.js"; 
+import "@ui5/webcomponents/dist/TableCell.js";
 
 function App() {
   return (
@@ -31,9 +39,50 @@ notification-count="16"
       </header>
       
 
+      <ui5-panel width="100%" accessible-role="Complementary"
+       collapsed = "true"
+	header-text="Подробно" class="full-width">
+	<h1 class="content-color">Тестовая оргструктура магазина!</h1>
+	<ui5-label wrap>
+Добавьте нового сотрудника в список сотрудников магазина и  проверьте его отображение в графике кадровой структуры
+
+  </ui5-label>
 
 
-     
+  <ui5-panel
+  fixed accessible-role="Complementary"
+ 
+	header-text="Оцените приложение"
+	class="panel-width">
+	<ui5-list id="myList2" mode="SingleSelectBegin" >
+		<ui5-li key="star5">5</ui5-li>
+		<ui5-li key="star4">4</ui5-li>
+		<ui5-li key="star3">3</ui5-li>
+		<ui5-li key="star3">2</ui5-li>
+    <ui5-li key="star1">1</ui5-li>
+	</ui5-list>
+  <h1 class="content-color"> </h1>
+  <ui5-button design="Positive">Оценить</ui5-button>
+</ui5-panel>
+
+
+
+
+
+
+</ui5-panel>
+
+<ui5-tabcontainer class="full-width" collapsed fixed show-overflow>
+	<ui5-tab text="Сотрудники" selected></ui5-tab>
+  <ui5-tab text="Добавить сотрудника" ></ui5-tab>
+	<ui5-tab text="Орг.Структура" ></ui5-tab>
+  <ui5-tab text="Редактор" ></ui5-tab>
+	
+
+</ui5-tabcontainer>
+
+
+
     </div>
   );
 }
