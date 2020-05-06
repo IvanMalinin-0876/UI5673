@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import "@ui5/webcomponents/dist/Button";
 import "@ui5/webcomponents-fiori/dist/ShellBar";
 import "@ui5/webcomponents/dist/Avatar.js";
 import "@ui5/webcomponents/dist/ComboBox";
@@ -13,9 +12,10 @@ import "@ui5/webcomponents/dist/Tab";
 import "@ui5/webcomponents/dist/TabSeparator";
 import "@ui5/webcomponents/dist/Table.js";
 import "@ui5/webcomponents/dist/TableColumn.js"; 
-import "@ui5/webcomponents/dist/TableRow.js"; 
-import "@ui5/webcomponents/dist/TableCell.js";
-
+import "@ui5/webcomponents-fiori/dist/ProductSwitch.js";
+import "@ui5/webcomponents/dist/Icon.js";
+import "@ui5/webcomponents/dist/Button";
+import "@ui5/webcomponents/dist/features/InputElementsFormSupport.js";
 function App() {
   return (
     <div className="App">
@@ -73,13 +73,35 @@ notification-count="16"
 </ui5-panel>
 
 <ui5-tabcontainer class="full-width" collapsed fixed show-overflow>
-	<ui5-tab text="Сотрудники" selected></ui5-tab>
+
+	<ui5-tab text="Сотрудники" selected> </ui5-tab>
   <ui5-tab text="Добавить сотрудника" ></ui5-tab>
 	<ui5-tab text="Орг.Структура" ></ui5-tab>
   <ui5-tab text="Редактор" ></ui5-tab>
 	
-
+  
 </ui5-tabcontainer>
+
+
+<ui5-panel
+	fixed accessible-role="Complementary"
+	header-text="Сотрудники"
+	class="panel-width">
+
+
+<ui5-button icon="away" aria-labelledby="lblAway">Обновить</ui5-button>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<ui5-button icon="action-settings" aria-labelledby="lblSettings" >Добавить</ui5-button>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<ui5-button icon="add" aria-labelledby="lblAdd">Экспорт</ui5-button>
+<span>&nbsp;&nbsp;&nbsp;</span>
+<ui5-button icon="alert" aria-labelledby="lblAlert">Печать</ui5-button>
+
+
+
+
+
+</ui5-panel>
 
 
 
